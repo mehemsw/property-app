@@ -1,0 +1,11 @@
+Zillow:
+Listings, market trends, neighborhood data
+
+Census Bureau:
+Decennial - https://api.census.gov/data/2020/dec/pl
+    get: variables to retrieve
+    for: geographic area (zip code)
+    key: 746215a5e65f4e6a4789d319a73268b70ede1a06
+American Community Survey (ACS) Five Year Survey - https://api.census.gov/data/2022/acs/acs5
+
+BLS:

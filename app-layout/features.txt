@@ -1,0 +1,19 @@
+Features:
+Search for real estate listings by zip code; This may be for recently sold properties
+Do investment analysis on them (ROI, Cash Flow, Rent estimates, comps?)
+Do a market trends overview for the properties (demographic data, housing stats, employment rates, income)
+Current interest rates, inflation?, mortgage calc
+Ownership history, tax records, crime rates, school ratings
+
+MVP:
+Search for properties by zipcode
+Basic analysis, current price, potential Rent
+Give population, population change, and employment data
+
+Stretch Goals:
+Profile that has your current investments
+Can check market data on those
+Possible automatic updates
+
+different user types
+do property management
