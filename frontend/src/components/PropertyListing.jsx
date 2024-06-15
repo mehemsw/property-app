@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import Grid from "@mui/material/Grid";
 import * as api from "../api/authApi";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import {
   Card,
@@ -37,14 +37,19 @@ const PropertyListing = ({ property, userToken }) => {
         longitude: coords.x,
       });
     }
+    if (userToken) {
+      performGetGeoRequest();
+    }
+  };
+
+  useEffect(() => {
     async function performUpdatePropertyGeo() {
       await api.updatePropertyGeo(userToken, geo, property.id);
     }
     if (userToken) {
-      performGetGeoRequest();
+      performUpdatePropertyGeo();
     }
-    performUpdatePropertyGeo();
-  };
+  }, [geo]);
 
   const handleWalkRequest = (e) => {
     e.preventDefault();
@@ -55,7 +60,7 @@ const PropertyListing = ({ property, userToken }) => {
     if (userToken) {
       performGetWalkRequest();
     }
-    setHaveWalk(!haveWalk)
+    setHaveWalk(!haveWalk);
   };
 
   return (
